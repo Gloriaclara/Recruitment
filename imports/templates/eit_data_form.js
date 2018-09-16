@@ -45,13 +45,18 @@ var form= event.target;
   var data ={
     first_name: form.first_name.value,
     last_name: form.last_name.value,
-    date_of_birth: form.date_of_birth,
+    date_of_birth: form.date_of_birth.value,
     country: form.country.value,
     gender: form.gender.value,
     cohort: form.cohort.value,
   };
+  var id = form.id.value;
+  if(id) {
+    Meteor.call('eits.update',id,data);
+  }else{
 
   Meteor.call('eits.insert',data);
-
+  }
+  form.reset();
 }
 });
