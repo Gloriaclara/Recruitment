@@ -2,23 +2,23 @@
   <form id="eit_data_form">
     <input type="hidden" name="id" />
     <label for= "first_name">First Name</label>
-    <br/>
+
     <input type="text" name="first_name" required />
-    <br/>
+
     <label for="last_name">Last Name</label>
-    <br/>
+
     <input type="text" name="last_name" required />
-    <br/>
+
     <label for="date of birth">Date of  birth</label>
-    <br/>
+
     <input type="date" name="date_of_birth" required />
-    <br/>
+
     <label for="gender">Gender</label>
-    <br/>
+
     <input type="radio" name="gender" value="Female" required/>Female<br/>
     <input type="radio" name="gender" value="Male" required/>Male<br/>
-    <label for="country">Contry</label>
-    <br/>
+    <label for="country">Country</label>
+
     <select name="country" required>
       {{ #each countries}}
       {{ # if default}}
@@ -28,7 +28,7 @@
        {{/if}}
        {{/each}}
     </select>
-    <br/>
+
     <label for="cohort">cohort(Year of Graduation)</label><br/>
     <select name="cohort">
       {{ #each cohorts}}
@@ -40,7 +40,7 @@
         {{/each}}
       </select>
 
-    <br/>
+
     <div>
       <i>All fields are required</i>
     </div>
